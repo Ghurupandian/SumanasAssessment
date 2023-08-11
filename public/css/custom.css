@@ -1,0 +1,117 @@
+body {
+    background: #00B4DB;
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+    color: #514B64;
+    min-height: 100vh;
+}
+.navbar{
+    box-shadow: 0px 1px 10px 1px #00000034 !important;
+}
+.rounded-lg {
+    border-radius: 1rem !important;
+}
+
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+.custom-separator {
+    width: 5rem;
+    height: 6px;
+    border-radius: 1rem;
+}
+
+.text-uppercase {
+    letter-spacing: 0.2em;
+}
+
+body {
+    background: #f5eed7;
+    color: #514B64;
+    min-height: 100vh;
+}
+
+.grid-products {
+    padding-bottom: 20px
+}
+.card{
+    display: block;
+    margin-top: 160px;
+    box-shadow: 3px 5px 10px 1px #0000001e !important;
+}
+
+.product-tit {
+    color: #38c172;
+    font-weight: 800;
+}
+
+#card-element {
+    border: 1px solid #ccc !important;
+    margin-top: 10px;
+    width: 500px;
+    padding: 10px;
+}
+
+@media (max-width:768px) {
+    #card-element {
+        border-bottom: 1px solid #ccc !important;
+        margin-top: 10px;
+        width: auto !important;
+    }
+}
+
+.lbl {
+    color: #000;
+    font-weight: 600;
+}
+
+.lbl-value {
+    color: #38c172;
+    font-weight: 600;
+}
+
+.desc {
+    color: #000;
+    font-weight: 400;
+}
+
+.success {
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 250px;
+}
+
+.label {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff74;
+    border-radius: 15px;
+    box-shadow: 3px 5px 10px 0px #cccccc86;
+    color: #38c172;
+    font-weight: 900;
+}
+
+.label-red {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff74;
+    border-radius: 15px;
+    box-shadow: 3px 5px 10px 0px #cccccc86;
+    color: #b40707;
+    font-weight: 900;
+}
+
+.msg {
+    color: #c93030;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 8px;
+}
