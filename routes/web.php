@@ -21,9 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/payment_success', 'ProductController@payment_success');
-Route::get('/payment_failure', 'ProductController@payment_failure');
-
 Route::middleware('auth')->group(function () {
     Route::get('/products', 'ProductController@products');
     Route::get('/buy_product/{id}', 'ProductController@buy_product');

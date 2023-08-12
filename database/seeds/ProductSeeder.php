@@ -20,17 +20,21 @@ class ProductSeeder extends Seeder
             {
                 if(isset($product->default_price) && $product->default_price != '' && $product->active == 1)
                 {
-                    $price = $stripe->prices->retrieve(
-                        $product->default_price,
-                        []
-                    );
-                    if(is_object($price))
+                    $check_product = Product::where('product_id', $product->default_price)->get()->count();
+                    if($check_product == 0)
                     {
-                        $data['name'] = $product->name;
-                        $data['product_id'] = $product->default_price;
-                        $data['price'] = $price->unit_amount / 100;
-                        $data['description'] = $product->description;
-                        Product::create($data);
+                        $price = $stripe->prices->retrieve(
+                            $product->default_price,
+                            []
+                        );
+                        if(is_object($price))
+                        {
+                            $data['name'] = $product->name;
+                            $data['product_id'] = $product->default_price;
+                            $data['price'] = $price->unit_amount / 100;
+                            $data['description'] = $product->description;
+                            Product::create($data);
+                        }
                     }
                 }
             }
