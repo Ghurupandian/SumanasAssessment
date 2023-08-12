@@ -7,7 +7,7 @@
 5)	Run “php artisan migrate” in your terminal or command prompt. This will migrate table in to your corresponding database that you mentioned in the “.env” file.
 6)	Create some products in your stripe account. Make sure that the product price type is “recurring”. Note: You can see “products” options on the top of the stripe dashboard page.
 7)	That products data will be added in to your table while running seeding command.
-8)	Then run “php artisan db:seed –class=ProductSeeder” command, this will add the stripe products data into your “products” table.
+8)	Then run “php artisan db:seed -–class=ProductSeeder” command, this will add the stripe products data into your “products” table.
 9)	Then run “php artisan serve” command.
 10)	Then browse http://127.0.0.1:8000/register. This will redirect you to the register page.
 11)	Register a user & it will automatically logging you & redirected to the products list page.
