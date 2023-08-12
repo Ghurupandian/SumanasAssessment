@@ -91,6 +91,13 @@
 
         if(error) {
             pay_button.disabled = false
+            Toastify({
+                text: error.code,
+                class: "failure",
+                style: {
+                    background: "red",
+                }
+            }).showToast();
         } else {
             let token = document.createElement('input')
             token.setAttribute('type', 'hidden')

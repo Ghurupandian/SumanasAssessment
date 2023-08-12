@@ -29,7 +29,7 @@
             </ul>
             @php
               $user_id = auth()->user()->id;
-              $check_product = \App\Subscription::where('user_id', $user_id)->where('name', $product->id)->get()->count();
+              $check_product = \App\Subscription::where('user_id', $user_id)->where('name', $product->id)->where('stripe_status', 'active')->get()->count();
             @endphp
 
             @if($check_product == 0)
