@@ -115,3 +115,9 @@ body {
     border-radius: 6px;
     padding: 8px;
 }
+
+.label-success {
+    background-color: #6fbe90 !important;
+    color: #fff;
+    cursor: unset !important;  
+}

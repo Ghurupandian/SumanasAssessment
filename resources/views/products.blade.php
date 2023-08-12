@@ -27,7 +27,16 @@
                     <i class="fa fa-check mr-2 text-primary"></i> {{ $product->description }}
                 </li>
             </ul>
-            <a href="/buy_product/{{ $product->id }}" class="btn btn-success btn-block shadow rounded-pill">Buy Now</a>
+            @php
+              $user_id = auth()->user()->id;
+              $check_product = \App\Subscription::where('user_id', $user_id)->where('name', $product->id)->get()->count();
+            @endphp
+
+            @if($check_product == 0)
+              <a href="/buy_product/{{ $product->id }}" class="btn btn-success btn-block shadow rounded-pill">Buy Now</a>
+            @else
+              <span class="btn btn-success btn-block shadow rounded-pill label-success">Purchased</span>
+            @endif
             </div>
         </div>
         @endforeach
